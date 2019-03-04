@@ -1,0 +1,46 @@
+			
+分页
+	- Django内置分页
+		- Paginator对象、Page对象
+		- 页面调用减少代码：include引入
+		
+	- 扩展Django的内置分页
+		- CustomPaginator(Paginator)
+	传入：
+		- 所有数据
+		- 当前页
+		- 每页显示多少条
+		- 最多少页码
+	
+	- 自定义分页
+		- 所有数据的个数
+		- 当前页
+		- 每页显示多少条
+		- 最多少页码
+
+
+
+Form组件
+	- 对用户请求的验证
+		- Ajax
+		- Form
+	- 生产HTML代码
+	
+	a.创建一个类
+	b.类中创建字段(包含正则表达式)
+	c.GET
+		obj = Fr()
+		obj.user => 自动生成HTML
+	d.POST
+		obj = Fr(request.POST)
+		if obj.is_valid():
+			print(obj.cleaned_data)	//字典形式的数据
+		else:
+			print(obj.errors)			//错误信息
+			return render(request,'f1.html',{'obj':obj})
+
+
+
+
+
+	
